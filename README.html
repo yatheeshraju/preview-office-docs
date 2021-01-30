@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>preview-office-docs</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="preview-office-docs">preview-office-docs</h1>
+<blockquote>
+<p>A React component to embed and preview office documents on website using Microsoft's <a href="http://officeapps.live.com">officeapps.live.com</a> .</p>
+</blockquote>
+<p><a href="https://www.npmjs.com/package/preview-office-docs"><img src="https://img.shields.io/npm/v/preview-office-docs.svg" alt="NPM"></a> <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="JavaScript Style Guide"></a></p>
+<h2 id="install">Install</h2>
+<pre><code class="language-bash"><div>npm install --save preview-office-docs
+</div></code></pre>
+<h2 id="requirements">Requirements</h2>
+<p>Files urls must be publicly accessible over internet</p>
+<p>Supported formats .ppt .xls .doc .odt .ods .odp</p>
+<p>Uses Microsoft officeapps . Check their terms when using .</p>
+<h2 id="usage">Usage</h2>
+<pre><code class="language-jsx"><div><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>
+
+<span class="hljs-keyword">import</span> Preview <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;preview-office-docs&#x27;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Example</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Preview</span>
+          <span class="hljs-attr">url</span>=<span class="hljs-string">&#x27;https://file-examples-com.github.io/uploads/2017/08/file_example_PPT_250kB.ppt&#x27;</span>
+          <span class="hljs-attr">height</span>=<span class="hljs-string">&#x27;700px&#x27;</span>
+          <span class="hljs-attr">width</span>=<span class="hljs-string">&#x27;800px&#x27;</span>
+        /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">Preview</span>
+          <span class="hljs-attr">url</span>=<span class="hljs-string">&#x27;https://file-examples-com.github.io/uploads/2017/02/file_example_XLS_10.xls&#x27;</span>
+          <span class="hljs-attr">height</span>=<span class="hljs-string">&#x27;700px&#x27;</span>
+          <span class="hljs-attr">width</span>=<span class="hljs-string">&#x27;800px&#x27;</span>
+        /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">Preview</span>
+          <span class="hljs-attr">url</span>=<span class="hljs-string">&#x27;https://file-examples-com.github.io/uploads/2017/02/file-sample_100kB.doc&#x27;</span>
+          <span class="hljs-attr">height</span>=<span class="hljs-string">&#x27;700px&#x27;</span>
+          <span class="hljs-attr">width</span>=<span class="hljs-string">&#x27;800px&#x27;</span>
+        /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">Preview</span>
+          <span class="hljs-attr">url</span>=<span class="hljs-string">&#x27;https://file-examples-com.github.io/uploads/2017/10/file-sample_100kB.odt&#x27;</span>
+          <span class="hljs-attr">height</span>=<span class="hljs-string">&#x27;700px&#x27;</span>
+          <span class="hljs-attr">width</span>=<span class="hljs-string">&#x27;800px&#x27;</span>
+        /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">Preview</span>
+          <span class="hljs-attr">url</span>=<span class="hljs-string">&#x27; https://file-examples-com.github.io/uploads/2017/10/file_example_ODS_10.ods&#x27;</span>
+          <span class="hljs-attr">height</span>=<span class="hljs-string">&#x27;700px&#x27;</span>
+          <span class="hljs-attr">width</span>=<span class="hljs-string">&#x27;800px&#x27;</span>
+        /&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">Preview</span>
+          <span class="hljs-attr">url</span>=<span class="hljs-string">&#x27;https://file-examples-com.github.io/uploads/2017/10/file_example_ODP_200kB.odp&#x27;</span>
+          <span class="hljs-attr">height</span>=<span class="hljs-string">&#x27;700px&#x27;</span>
+          <span class="hljs-attr">width</span>=<span class="hljs-string">&#x27;800px&#x27;</span>
+        /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+</div></code></pre>
+<h2 id="props">Props</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">prop</th>
+<th style="text-align:center">is</th>
+<th style="text-align:center">description</th>
+<th style="text-align:center">example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">url</td>
+<td style="text-align:center">required</td>
+<td style="text-align:center">url of the hosted file</td>
+<td style="text-align:center"><a href="https://file-examples-com.github.io/uploads/2017/02/file-sample_100kB.doc">https://file-examples-com.github.io/uploads/2017/02/file-sample_100kB.doc</a></td>
+</tr>
+<tr>
+<td style="text-align:center">height</td>
+<td style="text-align:center">optional</td>
+<td style="text-align:center">height of preview component</td>
+<td style="text-align:center">500px</td>
+</tr>
+<tr>
+<td style="text-align:center">width</td>
+<td style="text-align:center">optional</td>
+<td style="text-align:center">width of preview component</td>
+<td style="text-align:center">500px</td>
+</tr>
+</tbody>
+</table>
+<h2 id="license">License</h2>
+<p>MIT © <a href="https://github.com/yatheeshraju">yatheeshraju</a></p>
+
+    </body>
+    </html>

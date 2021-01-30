@@ -69,6 +69,17 @@ class Example extends Component {
   }
 }
 ```
+## Props
+
+
+
+|  prop  |    is    |         description         |                                  example                                  |
+| :----: | :------: | :-------------------------: | :-----------------------------------------------------------------------: |
+|  url   | required |   url of the hosted file    | https://file-examples-com.github.io/uploads/2017/02/file-sample_100kB.doc |
+| height | optional | height of preview component |                                   500px                                   |
+| width  | optional | width of preview component  |                                   500px                                   |
+
+
 
 ## License
 
