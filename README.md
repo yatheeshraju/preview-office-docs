@@ -23,7 +23,7 @@ Uses Microsoft officeapps . Check their terms when using .
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'preview-office-docs'
+import Preview from 'preview-office-docs'
 
 class Example extends Component {
   render() {
