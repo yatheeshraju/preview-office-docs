@@ -18,6 +18,10 @@ Supported formats .ppt .xls .doc .odt .ods .odp
 
 Uses Microsoft officeapps . Check their terms when using .
 
+## Demo 
+
+[preview-office-docs](https://yatheeshraju.github.io/preview-office-docs/)
+
 ## Usage
 
 ```jsx
